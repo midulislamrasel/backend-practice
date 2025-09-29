@@ -1,0 +1,12 @@
+# node_modules ফোল্ডার ignore হবে
+node_modules/
+
+# build ফোল্ডার ignore হবে
+dist/
+build/
+
+# environment ফাইল ignore হবে
+.env
+
+# macOS system files ignore হবে
+.DS_Store
