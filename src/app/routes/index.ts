@@ -1,10 +1,10 @@
 import express from "express";
-import UserRoutes from "./UserRoutes";
-import SubscriptionRouts from "./SubscriptionRouts";
-import PlanRoutes from "./PlanRoutes";
-import MealRoutes from "./MealRoutes";
-import DeliveryRoutes from "./DeliveryRoutes";
-import DeliveryPartnerRoutes from "./DeliveryPartnerRoutes";
+import UserRoutes from "./user.route";
+import SubscriptionRouts from "./subscription.route";
+import PlanRoutes from "./plan.routes";
+import MealRoutes from "./meal.routes";
+import DeliveryRoutes from "./delivery.route";
+import deliveryPartnerRoutes from "./deliveryPartner.route";
 
 
 const router = express.Router();
@@ -32,7 +32,7 @@ const moduleRoutes = [
     },
     {
       path: "/delivery-partners",
-      route: DeliveryPartnerRoutes
+      route: deliveryPartnerRoutes
     },
 ];
 
