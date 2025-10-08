@@ -9,8 +9,9 @@ import sendResponse from "./app/utils/send.response";
 const app: Application = express();
 
 // parsers
-app.use(cookieParser());
 app.use(express.json());
+
+app.use(cookieParser());
 app.use(
   cors({
     origin: "*",
@@ -21,6 +22,8 @@ app.use(
 
 // application routes
 app.use("/api/v1", router);
+
+
 
 // test route
 app.get("/", async (_req: Request, res: Response) => {
@@ -35,7 +38,6 @@ app.get("/", async (_req: Request, res: Response) => {
 app.use(notFound);
 // global error handler
 app.use(globalErrorHandler);
-
 // not found route
 
 export default app;
